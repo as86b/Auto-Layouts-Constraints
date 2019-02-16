@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         daleImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         //imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        daleImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        daleImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         
         daleImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         
@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         
 //        let button = UIButton()
 //
+//        //using default dimensions for a button?
+//        
 //        button.setTitle("Rotate Dale", for: .normal)
 //
 //        button.backgroundColor = .blue
@@ -47,13 +49,14 @@ class ViewController: UIViewController {
 //
 //        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
 //
-//        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 25).isActive = true
+//        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
 //
 //        view.addSubview(button)
     }
 
-    func buttonAction(sender: UIButton!) {
-        print("Button tapped")
-    }
+//    func buttonAction(sender: UIButton!) {
+//        print("Button tapped")
+//        //do rotation here
+//    }
 }
 
