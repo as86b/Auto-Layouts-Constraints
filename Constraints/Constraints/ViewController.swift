@@ -10,26 +10,50 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //nbd but im kinda using a closure here. Kinda cool
+    //Learned it from Module 3
+    let daleImageView: UIImageView = {
+        let daleImage = UIImage(named: "young-dale")
+        let imageView = UIImageView(image: daleImage)
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let daleImage = UIImage(named: "young-dale")
-        let imageView = UIImageView(image: daleImage)
+//        let daleImage = UIImage(named: "young-dale")
+//        let imageView = UIImageView(image: daleImage)
         
-        view.addSubview(imageView)
+        view.addSubview(daleImageView)
         
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        daleImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        daleImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         //imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        daleImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         
-        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        daleImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         
-        imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        daleImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        
+//        let button = UIButton()
+//
+//        button.setTitle("Rotate Dale", for: .normal)
+//
+//        button.backgroundColor = .blue
+//
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//
+//        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
+//
+//        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 25).isActive = true
+//
+//        view.addSubview(button)
+    }
+
+    func buttonAction(sender: UIButton!) {
+        print("Button tapped")
     }
 }
 
